@@ -95,6 +95,12 @@ namespace BankApp{
             BankAccount acc1 = new ICICI();
             BankAccount acc2 = new HSBC();
             
+            acc1.AccountType = BankAccountTypeEnum.Saving;
+            Console.WriteLine(acc1.AccountType);
+            
+            acc1.AccountType = BankAccountTypeEnum.Current;
+            Console.WriteLine(acc1.AccountType);
+            
             acc1.Deposit(100000);
             acc2.Deposit(200000);
             
@@ -103,6 +109,7 @@ namespace BankApp{
             
             Console.WriteLine(acc1.GetBalance());
             Console.WriteLine(acc2.GetBalance());
+            
             
         }
     }
